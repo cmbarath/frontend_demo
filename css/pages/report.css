@@ -1,0 +1,100 @@
+/* css/pages/report.css */
+
+.report-header {
+    text-align: center;
+    padding-top: calc(var(--nav-height) + var(--spacing-8));
+    margin-bottom: var(--spacing-8);
+}
+
+.report-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-upload-area {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-8);
+    text-align: center;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    background: rgba(255, 255, 255, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-upload-area:hover, .image-upload-area.dragover {
+    border-color: var(--color-primary);
+    background: rgba(0, 210, 255, 0.05);
+}
+
+.image-upload-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-preview {
+    display: none;
+    margin-top: var(--spacing-4);
+    border-radius: var(--radius-sm);
+    max-height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border: 1px solid var(--color-border);
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: var(--spacing-6);
+    margin-top: var(--spacing-8);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 7px;
+    height: 100%;
+    width: 2px;
+    background: var(--color-border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-6);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: calc(var(--spacing-6) * -1 - 4px);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--color-bg-surface);
+    border: 2px solid var(--color-border);
+    z-index: 1;
+}
+
+.timeline-item.active::before {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: var(--glow-primary);
+}
+
+.timeline-item h4 {
+    margin-bottom: var(--spacing-1);
+    font-size: var(--font-size-md);
+}
+
+.timeline-item p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+}

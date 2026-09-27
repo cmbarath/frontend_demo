@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore | Chennai Pulse</title>
+    
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    
+    <link rel="stylesheet" href="../css/pages/explore.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <!-- Global Navbar -->
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">CHENNAI <span>PULSE</span></a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="explore.html" class="nav-link active">Explore</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="insights.html" class="nav-link">Insights</a>
+                <a href="report.html" class="nav-link">Report</a>
+                <a href="my-chennai.html" class="nav-link">My Chennai</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="explore-container">
+        <!-- Interactive Map Area -->
+        <section class="map-section">
+            <div class="map-container reveal" id="map-container">
+                <!-- Markers injected via JS -->
+            </div>
+        </section>
+        
+        <!-- Sidebar -->
+        <aside class="explore-sidebar reveal-left">
+            <div class="sidebar-header">
+                <h2>Explore Areas</h2>
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" id="area-search" placeholder="Search Chennai areas...">
+                </div>
+            </div>
+            
+            <div class="sidebar-content">
+                <div id="empty-state" class="empty-state">
+                    <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;">📍</div>
+                    <h3>Select an Area</h3>
+                    <p>Click a marker on the illustrative map to view the demo area profile.</p>
+                </div>
+                
+                <div id="detail-panel" class="detail-panel">
+                    <span class="demo-badge" style="margin-bottom: 1rem;">Simulated Profile</span>
+                    <h2 class="area-title" id="p-title">Area Name</h2>
+                    <div class="area-type" id="p-type">Area Type</div>
+                    
+                    <div class="metrics-grid">
+                        <div class="metric-item">
+                            <div class="metric-label">Green Index</div>
+                            <div class="metric-value highlight" id="p-score">0</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Mobility</div>
+                            <div class="metric-value" id="p-mobility">0</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Activity</div>
+                            <div class="metric-value" id="p-activity">0</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-label">Community</div>
+                            <div class="metric-value" id="p-community">0</div>
+                        </div>
+                    </div>
+                    
+                    <a href="dashboard.html" id="p-btn" class="btn btn-primary" style="width: 100%;">View Dashboard Profile</a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Global JS -->
+    <script src="../js/storage.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/components.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/app.js"></script>
+    
+    <!-- Page JS -->
+    <script src="../js/pages/explore.js"></script>
+</body>
+</html>
